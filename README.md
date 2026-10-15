@@ -2,7 +2,7 @@
 
 ## Estado de publicación — 15 de octubre de 2026
 
-Desplegada directamente mediante la API de Cloudflare en https://sound-of-self.darioariza21.workers.dev/play.html. El Worker tiene sus recursos y la base D1 nueva tiene sus tablas y siete migraciones registradas. La administración docente sigue cerrada: falta autorizar y configurar TEACHER_ACCESS_KEY. La verificación HTTP desde el entorno automatizado recibe Cloudflare 403/1010, por lo que todavía no se comprobó la carga real, el audio, la cámara o el guardado externo desde un dispositivo. Prueba en un iPad del colegio antes de usarlo con alumnos.
+Desplegada directamente mediante la API de Cloudflare en https://sound-of-self.darioariza21.workers.dev/play.html. El Worker tiene sus recursos y la base D1 nueva tiene sus tablas y siete migraciones registradas. TEACHER_ACCESS_KEY quedó configurada con autorización del propietario. La clave se entregó en un archivo privado y no está en este repositorio ni en este ZIP. El inicio de sesión real en un dispositivo sigue pendiente de prueba. La verificación HTTP desde el entorno automatizado recibe Cloudflare 403/1010, por lo que todavía no se comprobó la carga real, el audio, la cámara o el guardado externo desde un dispositivo. Prueba en un iPad del colegio antes de usarlo con alumnos.
 
 Se conserva la publicación original en ChatGPT Sites. Las actualizaciones externas se publican por petición; no existe sincronización automática con Sites ni con GitHub. El repositorio GitHub contiene documentación, no una copia completa del código todavía.
 
@@ -39,7 +39,7 @@ Experimenta en la versión de ChatGPT Sites. Cuando elijas publicar una versión
 - Se conservan las siete migraciones originales y las API; no se finge guardado con respuestas locales.
 - Fuera de Sites, el inicio de sesión de ChatGPT no lo proporciona automáticamente Cloudflare. El adaptador usa una sesión firmada del propietario docente y elimina las cabeceras de identidad enviadas por el navegador. La clave nunca se envía a los alumnos ni se incluye en los archivos públicos.
 - La ruta anterior `/signin-with-chatgpt` se mantiene como alias local de la pantalla docente, para conservar compatibilidad con los enlaces existentes. No intenta abrir ChatGPT.
-- Si no se configura la clave, el acceso docente queda cerrado y muestra un mensaje de configuración pendiente.
+- La clave ya está configurada en esta instalación; futuros despliegues deben conservar ese secreto.
 - El modo Live se conserva como demo, igual que en el código fuente; no se convierte en una nueva función de producción. `TEACHER_STUDIO_PREVIEW=0` conserva el estudio experimental oculto.
 
 ## Verificación y límites
