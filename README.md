@@ -1,4 +1,11 @@
-# Sound of Self — GitHub + Cloudflare
+# Sound of Self — Cloudflare release v59
+
+## Estado de publicación — 15 de octubre de 2026
+
+Desplegada directamente mediante la API de Cloudflare en https://sound-of-self.darioariza21.workers.dev/play.html. El Worker tiene sus recursos y la base D1 nueva tiene sus tablas y siete migraciones registradas. La administración docente sigue cerrada: falta autorizar y configurar TEACHER_ACCESS_KEY. La verificación HTTP desde el entorno automatizado recibe Cloudflare 403/1010, por lo que todavía no se comprobó la carga real, el audio, la cámara o el guardado externo desde un dispositivo. Prueba en un iPad del colegio antes de usarlo con alumnos.
+
+Se conserva la publicación original en ChatGPT Sites. Las actualizaciones externas se publican por petición; no existe sincronización automática con Sites ni con GitHub. El repositorio GitHub contiene documentación, no una copia completa del código todavía.
+
 
 Release: Sites v59, 15 October 2026. Source commit: 5ecd9a9b218275d863445ebd60273c8d2b56d67b.
 
@@ -20,7 +27,7 @@ Este paquete es el código de un repositorio para **Cloudflare Workers + D1**. N
 8. Abre `/teacher-login` e ingresa esa clave para administrar tus clases. Los alumnos conservan el acceso por código de clase + avatar. Esta configuración externa tiene un único propietario docente; no es un sistema de registro para múltiples docentes independientes.
 9. Prueba el enlace `https://<worker>.<cuenta>.workers.dev/play.html` en un iPad de estudiantes. Que cloudflare.com abra no confirma que el filtro permita el subdominio del sitio. Usa la revisión de Helpdesk si lo bloquea.
 
-La configuración del enlace GitHub–Cloudflare y los secretos requieren acceso a tu cuenta de Cloudflare. Este paquete no ha sido desplegado allí.
+La configuración del enlace GitHub–Cloudflare y los secretos requieren acceso a tu cuenta de Cloudflare. El paquete fue desplegado directamente; la integración continua de GitHub sigue pendiente.
 
 ## Flujo de actualización
 
